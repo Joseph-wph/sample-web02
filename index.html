@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = {};
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body
+    class="bg-black text-white mx-auto max-w-7xl p-6 md:p-10"
+    style="font-family: &quot;Lato&quot;, sans-serif"
+  >
+    <!-- Navbar -->
+    <nav class="container mx-auto relative px-5">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="text-xl font-bold">Logo</div>
+
+        <!-- Menu Desktop -->
+        <div
+          class="hidden md:flex gap-5 text-sm md:text-base absolute left-1/2 -translate-x-1/2"
+        >
+          <a href="#" class="hover:text-orange-500 transition">Home</a>
+          <a href="#" class="hover:text-orange-500 transition">Services</a>
+          <a href="#" class="hover:text-orange-500 transition">About Me</a>
+          <a href="#" class="hover:text-orange-500 transition">Portfolio</a>
+          <a href="#" class="hover:text-orange-500 transition">Contact Me</a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-3">
+          <!-- Button Desktop -->
+          <button
+            class="hidden md:block bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600 transition"
+          >
+            Hire Me
+          </button>
+
+          <!-- Hamburger -->
+          <button id="menu-btn" class="md:hidden text-3xl">☰</button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 py-5">
+        <a href="#" class="block hover:text-orange-500">Home</a>
+        <a href="#" class="block hover:text-orange-500">Services</a>
+        <a href="#" class="block hover:text-orange-500">About Me</a>
+        <a href="#" class="block hover:text-orange-500">Portfolio</a>
+        <a href="#" class="block hover:text-orange-500">Contact Me</a>
+
+        <button
+          class="bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600 transition w-fit"
+        >
+          Hire Me
+        </button>
+      </div>
+    </nav>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <div
+      class="container mx-auto py-10 flex flex-col md:flex-row items-center justify-between gap-10"
+    >
+      <!-- LEFT -->
+      <div class="flex flex-col gap-8 max-w-xl">
+        <div class="flex flex-col gap-3">
+          <div class="font-semibold text-xl md:text-2xl">
+            <p>Hi I am</p>
+            <p>Joseph</p>
+          </div>
+
+          <h1
+            class="font-extrabold text-4xl md:text-6xl text-orange-500 leading-tight"
+          >
+            Graphic Designer
+          </h1>
+        </div>
+
+        <!-- Sosmed -->
+        <div class="flex gap-4">
+          <img
+            src="assets/sosmed/instagram.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+          <img
+            src="assets/sosmed/linkedin.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+          <img
+            src="assets/sosmed/website.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+        </div>
+
+        <!-- Button -->
+        <div class="flex gap-4">
+          <button
+            class="border border-white px-4 py-2 rounded-lg hover:bg-orange-500 hover:border-transparent transition"
+          >
+            Hire Me
+          </button>
+          <button
+            class="border border-white px-4 py-2 rounded-lg hover:bg-orange-500 hover:border-transparent transition"
+          >
+            Download CV
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div
+          class="bg-slate-950 p-5 rounded-2xl flex gap-8 items-center justify-center w-full max-w-md"
+        >
+          <div class="text-center">
+            <h1 class="text-xl text-orange-500 font-extrabold">5+</h1>
+            <p class="text-sm">Experiences</p>
+          </div>
+
+          <div class="w-px h-10 bg-white"></div>
+
+          <div class="text-center">
+            <h1 class="text-xl text-orange-500 font-extrabold">20+</h1>
+            <p class="text-sm">Project Done</p>
+          </div>
+
+          <div class="w-px h-10 bg-white"></div>
+
+          <div class="text-center">
+            <h1 class="text-xl text-orange-500 font-extrabold">80+</h1>
+            <p class="text-sm">Happy Clients</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (IMAGE) -->
+      <div class="relative w-[280px] md:w-[350px] h-[320px] md:h-[500px]">
+        <!-- Blob -->
+        <img
+          src="assets/image/blob.svg"
+          class="absolute top-1/2 left-1/2 w-[380px] md:w-[450px] -translate-x-1/2 -translate-y-1/2 z-10"
+        />
+
+        <!-- Foto -->
+        <img
+          src="assets/image/picture.png"
+          class="absolute top-6 left-6 w-full h-full object-contain z-20 shadow-lg"
+        />
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="container mx-auto py-16 text-center">
+      <h1 class="font-extrabold text-3xl md:text-4xl">Services</h1>
+      <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
+        Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit
+        felis ligula aliquam
+      </p>
+    </div>
+
+    <div class="container mx-auto py-16 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-5">
+        <div
+          class="flex flex-col justify-center items-center bg-slate-950 rounded-xl w-full h-[302px]"
+        >
+          <img
+            src="assets/icon/2-User.svg"
+            alt="Icon"
+            class="flex items-center justify-center p-3"
+          />
+          <h1 class="text-base font-bold text-orange-500">Graphic Design</h1>
+          <p class="p-5 text-center text-slate-500">
+            Lorem ipsum dolor sit amet . Imperdiet
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center bg-slate-950 rounded-xl w-full h-[302px]"
+        >
+          <img
+            src="assets/icon/2-User.svg"
+            alt="Icon"
+            class="flex items-center justify-center p-3"
+          />
+          <h1 class="text-base font-bold text-orange-500">Video Editing</h1>
+          <p class="p-5 text-center text-slate-500">
+            Lorem ipsum dolor sit amet . Imperdiet
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center bg-slate-950 rounded-xl w-full h-[302px]"
+        >
+          <img
+            src="assets/icon/2-User.svg"
+            alt="Icon"
+            class="flex items-center justify-center p-3"
+          />
+          <h1 class="text-base font-bold text-orange-500">Motion Graphic</h1>
+          <p class="p-5 text-center text-slate-500">
+            Lorem ipsum dolor sit amet . Imperdiet
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center bg-slate-950 rounded-xl w-full h-[302px]"
+        >
+          <img
+            src="assets/icon/2-User.svg"
+            alt="Icon"
+            class="flex items-center justify-center p-3"
+          />
+          <h1 class="text-base font-bold text-orange-500">Web Design</h1>
+          <p class="p-5 text-center text-slate-500">
+            Lorem ipsum dolor sit amet . Imperdiet
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me -->
+    <div class="container mx-auto py-16 text-center">
+      <h1 class="font-extrabold text-3xl md:text-4xl">About Me</h1>
+      <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
+        Graphic Design, Video Editor, Motion Graphic, Web Design
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-3 justify-center items-center">
+      <div class="flex md:flex-row flex-col justify-center items-center gap-5">
+        <!-- RIGHT (IMAGE) -->
+        <div class="relative w-[280px] md:w-[350px] h-[400px] md:h-[500px]">
+          <!-- Blob -->
+          <img
+            src="assets/image/blob.svg"
+            class="absolute top-1/2 left-1/2 w-[300px] md:w-[450px] -translate-x-1/2 -translate-y-1/2 z-10"
+          />
+
+          <!-- Foto -->
+          <img
+            src="assets/image/picture.png"
+            class="absolute top-6 left-6 w-full h-full object-contain z-20 shadow-lg"
+          />
+        </div>
+        <p class="w-full h-full p-5 leading-loose p-3">
+          Creative Designer with 10+ years of experience in branding, marketing
+          communication, and visual design. Skilled in delivering impactful
+          campaigns across print and digital platforms. Proven track record in
+          leading design projects that strengthen brand identity, increase
+          awareness, and drive sales growth.
+        </p>
+      </div>
+
+      <!-- Logo Technical -->
+      <div class="grid grid-cols-3 gap-5 md:flex mt-10">
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/adobe-photoshop.svg"
+            alt="Adobe photoshop"
+            class="w-[80px] h-[80px]"
+          />
+          <p class="text-xs text-center min-h-[40px]">Adobe Photoshop</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/adobe-illustrator.svg"
+            alt="Adobe Illustrator"
+            class="w-[80px] h-[80px]"
+          />
+          <p class="text-sm text-center min-h-[40px]">Adobe Illustrator</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/premier-pro.svg"
+            alt="Adobe Premier"
+            class="w-[80px] h-[80px]"
+          />
+          <p class="text-sm text-center min-h-[40px]">Adobe Premier</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/after-effect.svg"
+            alt="Adobe After Effect"
+            class="w-[80px] h-[80px]"
+          />
+          <p class="text-sm text-center min-h-[40px]">Adobe After Effect</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/3d-max.svg"
+            alt="3DS Max"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">3DS Max</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/logo-grafis/figma.svg"
+            alt="Figma"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">Figma</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/it/html.svg"
+            alt="html"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">HTML</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/it/css.svg"
+            alt="css"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">CSS</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/it/tailwind.svg"
+            alt="Tailwind"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">Tailwind</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/it/react.svg"
+            alt="React"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">React</p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center items-center">
+          <img
+            src="assets/logo/it/typescript.svg"
+            alt="Typescript"
+            class="w-[80px] h-[80px] bg-white rounded-xl p-3"
+          />
+          <p class="text-sm text-center min-h-[40px]">Typescript</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portofolio -->
+    <div class="container mx-auto py-16 text-center">
+      <div class="flex flex-col justify-center items-center gap-5">
+        <h1 class="font-extrabold text-3xl md:text-4xl">Portofolio</h1>
+        <div class="flex flex-wrap gap-4 mt-10">
+          <button
+            class="px-4 py-2 rounded-lg bg-gray-900 hover:bg-orange-500 transition-colors duration-300"
+          >
+            All
+          </button>
+
+          <button
+            class="px-4 py-2 rounded-lg bg-gray-900 hover:bg-orange-500 transition-colors duration-300"
+          >
+            Graphic Design
+          </button>
+
+          <button
+            class="px-4 py-2 rounded-lg bg-gray-900 hover:bg-orange-500 transition-colors duration-300"
+          >
+            Motion Graphic
+          </button>
+
+          <button
+            class="px-4 py-2 rounded-lg bg-gray-900 hover:bg-orange-500 transition-colors duration-300"
+          >
+            Video Editing
+          </button>
+
+          <button
+            class="px-4 py-2 rounded-lg bg-gray-900 hover:bg-orange-500 transition-colors duration-300"
+          >
+            Web Design
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-5 md:flex md:flex-wrap">
+      <img src="assets/portofolio/logo1.svg" alt="logo1" />
+      <img src="assets/portofolio/logo2.svg" alt="logo2" />
+      <img src="assets/portofolio/logo3.svg" alt="logo3" />
+      <img src="assets/portofolio/logo4.svg" alt="logo4" />
+      <img src="assets/portofolio/logo5.svg" alt="logo5" />
+      <img src="assets/portofolio/logo6.svg" alt="logo6" />
+    </div>
+
+    <!-- Contact Me -->
+    <div class="container mx-auto py-16 text-center">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="font-extrabold text-3xl md:text-4xl">Contact Me</h1>
+        <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
+          Cultivating Connections: Reach Out and Connect with Me
+        </p>
+      </div>
+
+      <!-- Form -->
+      <section class="container mx-auto px-5 py-16 text-white">
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- LEFT COLUMN -->
+          <div class="flex flex-col gap-5">
+            <!-- Name -->
+            <input
+              type="text"
+              placeholder="Name"
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition"
+            />
+
+            <!-- Phone -->
+            <input
+              type="text"
+              placeholder="Phone Number"
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition"
+            />
+
+            <!-- Timeline -->
+            <input
+              type="text"
+              placeholder="Timeline"
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition"
+            />
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="flex flex-col gap-5">
+            <!-- Email -->
+            <input
+              type="email"
+              placeholder="Email"
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition"
+            />
+
+            <!-- Select -->
+            <select
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition text-gray-400"
+            >
+              <option>Service Of Interest</option>
+              <option>Graphic Design</option>
+              <option>Motion Graphic</option>
+              <option>Video Editing</option>
+              <option>Web Design</option>
+            </select>
+
+            <!-- Textarea -->
+            <textarea
+              rows="5"
+              placeholder="Project Details..."
+              class="bg-[#141414] border border-transparent focus:border-orange-500 rounded-xl px-5 py-4 outline-none transition resize-none"
+            ></textarea>
+          </div>
+
+          <!-- BUTTON -->
+          <div class="md:col-span-2 flex justify-center md:justify-end">
+            <button
+              type="submit"
+              class="border border-gray-500 px-10 py-3 rounded-xl hover:bg-orange-500 hover:border-orange-500 transition duration-300"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="container mx-auto py-16 text-center">
+      <div class="flex flex-col gap-5">
+        <!-- Menu Desktop -->
+        <div class="flex gap-3 md:gap-10 text-sm justify-center items-center">
+          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+            >Home</a
+          >
+          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+            >Services</a
+          >
+          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+            >About Me</a
+          >
+          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+            >Portfolio</a
+          >
+          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+            >Contact Me</a
+          >
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-10"
+        >
+          <div class="flex gap-3">
+            <img src="assets/symbol/mail.svg" alt="mail" />
+            <p class="text-gray-500">josephcorrs.psd@gmail.com</p>
+          </div>
+          <div class="flex gap-3">
+            <img src="assets/symbol/phone.svg" alt="mail" />
+            <p class="text-gray-500">+62 818 0759 7477</p>
+          </div>
+        </div>
+
+        <!-- Sosmed -->
+        <div class="flex justify-center items-center gap-4 mt-5">
+          <img
+            src="assets/sosmed/instagram.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+          <img
+            src="assets/sosmed/linkedin.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+          <img
+            src="assets/sosmed/website.svg"
+            class="w-6 cursor-pointer hover:scale-110 transition"
+          />
+        </div>
+
+        <hr class="border-gray-700 my-5" />
+
+        <p class="text-gray-500 text-base">Designed by Joseph</p>
+      </div>
+    </div>
+  </body>
+</html>
