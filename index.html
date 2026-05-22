@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,10 +29,18 @@
           class="hidden md:flex gap-5 text-sm md:text-base absolute left-1/2 -translate-x-1/2"
         >
           <a href="#" class="hover:text-orange-500 transition">Home</a>
-          <a href="#" class="hover:text-orange-500 transition">Services</a>
-          <a href="#" class="hover:text-orange-500 transition">About Me</a>
-          <a href="#" class="hover:text-orange-500 transition">Portfolio</a>
-          <a href="#" class="hover:text-orange-500 transition">Contact Me</a>
+          <a href="#services" class="hover:text-orange-500 transition"
+            >Services</a
+          >
+          <a href="#about-me" class="hover:text-orange-500 transition"
+            >About Me</a
+          >
+          <a href="#portofolio" class="hover:text-orange-500 transition"
+            >Portfolio</a
+          >
+          <a href="#contact" class="hover:text-orange-500 transition"
+            >Contact Me</a
+          >
         </div>
 
         <!-- Right Side -->
@@ -51,11 +59,11 @@
 
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 py-5">
-        <a href="#" class="block hover:text-orange-500">Home</a>
-        <a href="#" class="block hover:text-orange-500">Services</a>
-        <a href="#" class="block hover:text-orange-500">About Me</a>
-        <a href="#" class="block hover:text-orange-500">Portfolio</a>
-        <a href="#" class="block hover:text-orange-500">Contact Me</a>
+        <a href="#home" class="block hover:text-orange-500">Home</a>
+        <a href="#services" class="block hover:text-orange-500">Services</a>
+        <a href="#about-me" class="block hover:text-orange-500">About Me</a>
+        <a href="#portofolio" class="block hover:text-orange-500">Portfolio</a>
+        <a href="#contact" class="block hover:text-orange-500">Contact Me</a>
 
         <button
           class="bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600 transition w-fit"
@@ -77,6 +85,7 @@
 
     <!-- Hero Section -->
     <div
+      id="home"
       class="container mx-auto py-10 flex flex-col md:flex-row items-center justify-between gap-10"
     >
       <!-- LEFT -->
@@ -117,11 +126,13 @@
           >
             Hire Me
           </button>
-          <button
-            class="border border-white px-4 py-2 rounded-lg hover:bg-orange-500 hover:border-transparent transition"
-          >
-            Download CV
-          </button>
+          <a href="assets/cv/cv-yoseph.pdf" download>
+            <button
+              class="border border-white px-4 py-2 rounded-lg hover:bg-orange-500 hover:border-transparent transition"
+            >
+              Download CV
+            </button>
+          </a>
         </div>
 
         <!-- Stats -->
@@ -166,7 +177,7 @@
     </div>
 
     <!-- Services -->
-    <div class="container mx-auto py-16 text-center">
+    <div id="services" class="container mx-auto py-16 text-center">
       <h1 class="font-extrabold text-3xl md:text-4xl">Services</h1>
       <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
         Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit
@@ -235,7 +246,7 @@
     </div>
 
     <!-- About Me -->
-    <div class="container mx-auto py-16 text-center">
+    <div id="about-me" class="container mx-auto py-16 text-center">
       <h1 class="font-extrabold text-3xl md:text-4xl">About Me</h1>
       <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
         Graphic Design, Video Editor, Motion Graphic, Web Design
@@ -361,7 +372,7 @@
     </div>
 
     <!-- Portofolio -->
-    <div class="container mx-auto py-16 text-center">
+    <div id="portofolio" class="container mx-auto py-16 text-center">
       <div class="flex flex-col justify-center items-center gap-5">
         <h1 class="font-extrabold text-3xl md:text-4xl">Portofolio</h1>
         <div class="flex flex-wrap gap-4 mt-10">
@@ -408,7 +419,7 @@
     </div>
 
     <!-- Contact Me -->
-    <div class="container mx-auto py-16 text-center">
+    <div id="contact" class="container mx-auto py-16 text-center">
       <div class="flex flex-col justify-center items-center">
         <h1 class="font-extrabold text-3xl md:text-4xl">Contact Me</h1>
         <p class="text-slate-500 mt-3 max-w-xl mx-auto text-sm md:text-base">
@@ -490,19 +501,27 @@
         <div
           class="flex gap-3 md:gap-10 md:text-sm text-xs justify-center items-center"
         >
-          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+          <a href="#home" class="hover:text-orange-500 transition min-h-[40px]"
             >Home</a
           >
-          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+          <a
+            href="#services"
+            class="hover:text-orange-500 transition min-h-[40px]"
             >Services</a
           >
-          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+          <a
+            href="#about-me"
+            class="hover:text-orange-500 transition min-h-[40px]"
             >About Me</a
           >
-          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+          <a
+            href="#portofolio"
+            class="hover:text-orange-500 transition min-h-[40px]"
             >Portfolio</a
           >
-          <a href="#" class="hover:text-orange-500 transition min-h-[40px]"
+          <a
+            href="#contact"
+            class="hover:text-orange-500 transition min-h-[40px]"
             >Contact Me</a
           >
         </div>
